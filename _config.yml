@@ -1,8 +1,8 @@
 ### your site title here
 
 title: Hagura - Light!
-baseurl: /hagura # name of the repository
-email: your@email.com
+baseurl: /styzhu.github.io # name of the repository
+email: zhu@junyuan.me
 
 
 
@@ -29,7 +29,7 @@ compress_html:
   blanklines: false
   profile: false
   startings: []
-  
+
 
 sass:
  style: compressed
