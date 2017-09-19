@@ -1,13 +1,21 @@
 <!DOCTYPE HTML>
 <html>
-<script src="js/pachinnko.js"></script>
 <body>
-
 <canvas id="myCanvas" width="600" height="600"></canvas>
-<input type="number" name="height" step="1" min="1" value="10"/>
-<input type="number" name="ball_number" step="1" min="1" value="10"/>
-<input type="number" name="left_rate" step="any" min="0.0" max="1.0" value="0.5">
+<br></br>
+<table>
+  <tr>
+    <td>Height</td>
+    <td>Balls</td>
+    <td>L_Rate</td>
+  </tr>
+  <tr>
+    <td><input type="number" id="height" step="1" min="1" value="10"/></td>
+    <td><input type="number" id="ball_number" step="1" min="1" value="10"/></td>
+    <td><input type="number" id="left_rate" step="0.01" min="0.0" max="1.0" value="0.5"></td>
+  </tr>
+</table>
 <button type="button" id="run_button">Run</button>
-
+<script src="js/pachinnko.js"></script>
 </body>
 </html>
