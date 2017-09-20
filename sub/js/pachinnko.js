@@ -54,7 +54,7 @@ function runPachinnko()
     context.lineWidth = 7;
     context.strokeStyle = 'rgba(100, 100, 100, 0.2)';
     context.stroke();
-    var _index = (_x - margin_x)/gap_x;
+    var _index = Math.round((_x - margin_x)/gap_x);
     result_array[_index]++;
   }
 
