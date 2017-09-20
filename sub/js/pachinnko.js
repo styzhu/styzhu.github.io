@@ -43,11 +43,11 @@ function runPachinnko()
     var _x = canvas.width/2;
     var _y = 0;
     context.moveTo(_x, _y);
-    _y = _y + gap_y;
+    _y = _y + margin_y;
     context.lineTo(_x, _y);
     for(var j = 0; j < height; ++j)
     {
-      _x = _x + gap_x * getRandomLeft(left_rate) / 2;
+      _x = _x - gap_x * getRandomLeft(left_rate) / 2;
       _y = _y + gap_y;
       context.lineTo(_x, _y);
     }
@@ -60,8 +60,26 @@ function runPachinnko()
 
   for(var i = 0; i< real_height; ++i)
   {
-    context.font = "30px Arial";
+    var _font_size = 300/real_height;
+    context.font = _font_size + "px Arial";
     context.fillText(result_array[i], margin_x + gap_x * i, canvas.height - margin_y/2);
+  }
+
+  // print output in the result table in HTML
+  var result_table = document.getElementById('result_table');
+  var row = result_table.insertRow(-1);
+  for(var i = 0; i < real_height;++i)
+  {
+    var cell = row.insertCell(-1);
+    cell.innerHTML = i+1;
+    cell.className += "result_class";
+  }
+  row = result_table.insertRow(-1);
+  for(var i = 0; i < real_height;++i)
+  {
+    var cell = row.insertCell(-1);
+    cell.innerHTML = result_array[i];
+    cell.className += "result_class";
   }
 }
 
